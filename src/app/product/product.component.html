@@ -1,0 +1,92 @@
+<div class ="row">
+  <ul class="navbar-nav col-lg-12" style="margin-left: 900px;">
+    <li>
+      <div class="search">
+        <mat-card>
+        <input type="search" (keyup)="filterdata($event.target.value)" placeholder="Search....." aria-label="search..." />
+        <i class="searchIcon fa fa-search primary-color" ></i>
+        </mat-card>
+        
+      </div>
+    </li>
+  </ul>
+  
+</div>
+    <div class="row">
+      <div class="col-lg-2 col-sm-12 col-xs-12 col-md-2 pt-4  ">
+          <mat-card tabindex="0" >
+              <mat-card-title>
+                        <div class="row">
+                        <i class="col-md-4 fa fa-shopping-cart " style="font-size:18.5px;"></i><span *ngIf="items.length!=0" class='badge badge-warning' id='lblCartCount'>{{items.length}}</span>
+                        <h5 class="col-md-8">Food Cart</h5>
+                        <hr>
+                      </div>
+              </mat-card-title>
+              <mat-card-content>
+                <p *ngIf="items.length==0" class="text-uppercase" style="font-size: 12px; font-weight: bold; text-align: center;">No Items Selected</p>
+                <p *ngIf="items.length!=0" class="text-uppercase" style="font-size: 12px; font-weight: bold; text-align: center;">{{items.length}} Items Selected</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button [disabled]="items.length==0" (click)="checkout()" class="btn  btn-outline-dark btn-block">Checkout <i class="fa fa-angle-right"></i></button>
+            </mat-card-actions>
+
+          </mat-card>
+          </div>
+  
+          <!-- Responsive UI -->
+
+  
+      <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+          <div class="row mt-4">
+              <div class="col-md-3 col-sm-6 col-xs-6 col-lg-3" *ngFor="let product of datasource.filteredData">
+    <div class="product-grid3">
+      <div class="card mb-4" style="border:none; background: none; ">
+        <div class="view overlay row  mx-auto">
+          <a >
+            <img class="pic-1 img-fluid" style="height: 182px;
+            width: 160px;
+            margin: 16px 10px 0px 20px;" src="{{product.img}}" height="100%" width="100%;">
+          </a>
+         </div>
+        <div class="card-body">
+          <span class="title  text-center mr-auto ml-auto" ><a class="category-title"> {{product.name }}</a></span>
+          <div class="row mt-2 text-center mr-auto ml-auto d-flex">
+            <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6 col-6">
+                <ul class="rating ">
+                    <span  class="fa fa-star checked" ></span>
+                    <span  class="fa fa-star" ></span>
+                  </ul>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6 col-6">
+                <ul class="social">
+                    <li><a class="bg-primary-color ml-1" (click)="addToCart(product.id)"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+                  </div>
+            </div>
+          <div class="row mt-1 d-flex ">
+            <div class="col-md-7 col-xs-6 col-sm-6 col-lg-7 col-8 d-flex ml-auto">
+                    <div >
+                      <span class="price"> ₹{{product.webprice}}</span>
+                      <!-- <span class="price1 pl-1"><del>₹{{product.mrpprice}}</del></span> -->
+                    </div>
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-6 col-lg-5 col-4 mr-auto d-flex" >
+                <!-- <span  class="bg-success px-1 off" >
+                    {{product.discount}}% off
+                  </span> -->
+            </div>
+          </div>
+          </div>
+        </div>
+           
+    
+      </div>
+
+              </div>
+              
+            </div>
+
+      </div>
+  
+    </div>
+  

@@ -1,0 +1,88 @@
+
+    <div class="row">
+  
+    <div class="col-md-8 offset-md-1 ">
+    <mat-card>
+        <div class="p-3">
+        
+          <div class="row">
+            <div class="col-md-4">
+            <a  routerLink='' style="line-height:1.0;color:#5DADE2;text-decoration:none;"><i class="fas fa-heart"></i> Add More</a>
+          </div> 
+          
+        </div>
+      
+         </div>
+    <table id="cart" class="table table-hover table-condensed">
+      <thead>
+        <tr>
+          <th >Product</th>
+          <th >Price</th>
+          <th >Quantity</th>
+          <th  class="text-center">Subtotal</th>
+          <th ></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items_list">
+          <td data-th="Product">
+            <div class="row">
+              <div class="col-sm-2 d-none d-sm-block"><img src="{{item.img}}" class="w-100" />
+              </div>
+              <div class="col-sm-10">
+                <h5 style="font-family: 'Open Sans', sans-serif;" class="nomargin">{{item.name}}</h5>
+                <h6 style="color:#566573;  ">{{item.name}}</h6>
+              </div>
+            </div>
+          </td>
+          <td data-th="Price">{{item.webprice}}</td>
+          <td class="quantity">
+            <!-- <input type="number" min="1" class="form-control text-center" (change)="updateCart(item.id,$event.target.value)" value={{item.quantity}}> -->
+            <button [disabled]="item.quantity==1"  class="btn minus1" (click)="removequantity(item.id)">-</button>
+            <input class="quantity" readonly id="id_form-0-quantity" min="1" name="form-0-quantity" value={{item.quantity}} type="number">
+            <button class="btn add1 " (click)="addquantity(item.id)">+</button>
+          </td>
+          <td data-th="Subtotal" class="text-center">{{item.webprice*item.quantity}}</td>
+          <td class="actions d-flex" data-th="">
+            <button class="btn btn-danger btn-sm ml-1" (click)="deleteFromCart(item.id)"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card>
+  </div>
+  <div class="col-md-3">
+    <mat-card class="md-elevation-z7">
+      <h5>Price Detail</h5>
+     <div class="pt-3">
+    <table class="w-100" >
+      <tr class="d-flex justify-content-between w-100">
+        <td style="font-size:16px;">Price({{items_list.length}} items)</td>
+        <td *ngIf="total_price!=0" style="font-size:16px;" class="pl-3">{{total_price}}</td>
+      </tr>
+      <tr class="d-flex justify-content-between w-100">
+          <td style="font-size:16px;">Delivery</td>
+          <td style="font-size:16px;color:green;" class="pl-3">Free</td>
+        </tr>
+      
+    </table>
+    <!-- <mat-divider></mat-divider> -->
+    <div class="pt-3">
+        <table class="w-100">
+        <tr class="d-flex justify-content-between w-100">
+            <td style="font-size:16px;"><strong>Total</strong></td>
+    
+        <td  style="font-size:16px;" class="pl-3"><strong>{{total_price}}</strong></td>
+          </tr>
+    </table>
+  </div>
+  
+  
+  </div>
+    </mat-card>
+    <div class="text-center pt-5">
+        <p style="color:#239B56;font-size:18px;"><i  class="fas fa-door-closed"></i>Safe and Secure Payments </p>
+  </div>
+  </div>
+  </div>
+  

@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*@import '~ngx-owl-carousel/lib/styles/scss/owl.carousel.css';*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+	font-family: 'titillium web','Roboto','montserrat','Courier New', monospace;
+}
+:root {
+    --primary-color: #165DFA;
+    /* --primary-color: #42205c; */
+  }
+  .mat-card .mat-divider {
+    display: block;
+    margin: 0;
+    border-top-width: 1px;
+    border-top-style: solid; 
+    margin-top: 7px;
+}
+.mat-expansion-panel-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 24px;
+    margin-top: 33px;
+}
+a {
+    cursor: pointer;
+}
+
+/* ======= Website Color Palette #0.0.E.6.76 ====== #933AEA*/
+.primary-color {
+    color: var(--primary-color) !important;
+  }
+  .primary-color.with-hover:hover{
+    background-color: var(--primary-color) !important;
+    color: white !important;
+  }
+  
+  .bg-primary-color {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+  }
+  
+  .border-primary-color:hover{
+    background-color: var(--primary-color) !important;
+    color: white !important;
+  }
+  
+  .border-primary-color {
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+  }
+  .bg-secondary-color{
+    background-color:#FFF;
+  }
+  .bg-3{
+    color:var(--primary-color);
+  }
+  .bg-4{
+    color:#000;
+  }
+  
+  /* Profile component */
+  
+  .user .mat-card i{
+    color:var(--primary-color);
+  }
+  
+  .select .mat-card i{
+    color:var(--primary-color);
+  }
+  
+  
+
+/* Navbar component */
+.navbar-brand{
+    color:white;
+  }
+  .navbar form ul{
+    background-color: white;
+    color: black;
+  }
+  .navbar ul li a{
+    color:white;
+  }
+  .navbar ul li a i{
+    color:white;
+  }
+  .navbar button{
+    color:white;
+   border-color:#fff;
+  background:#39DC7E;
+  }

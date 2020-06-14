@@ -1,0 +1,139 @@
+
+.product-grid3{
+    font-family:Roboto,sans-serif;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+.product-grid3:before{content:"";height:81%;width:100%;background:#fff; opacity:0;position:absolute;top:0;left:0;z-index:-1;transition:all .5s ease 0s}
+.product-grid3:hover:before{opacity:1;height:100%}
+.product-grid3 .product-image3{position:relative}
+.product-grid3 .product-image3 a{display:block}
+/* .product-grid3 .product-image3 img{width:100%;height:auto} */
+.product-grid3 .product-image3 img{max-height:200px;min-height:200px;}
+.product-grid3 .pic-1{opacity:1;transition:all .5s ease-out 0s}
+.product-grid3:hover .pic-1{opacity:1}
+.product-grid3 .pic-2{position:absolute;top:0;left:0;opacity:0;transition:all .5s ease-out 0s}
+.product-grid3:hover .pic-2{opacity:1}
+.product-grid3 .social{padding:0;margin:0;list-style:none;opacity:0;position: relative;right:0;left:0;bottom:0px;transform:scale(0);transition:all .3s ease 0s}
+.product-grid3:hover .social{opacity:1;transform:scale(1)}
+.product-grid3:hover .product-discount-label,.product-grid3:hover .product-new-label,.product-grid3:hover .title{opacity:1}
+
+.product-grid3 .title{font-size:14px;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}
+.product-grid3:hover .title a{color:#414141}
+.product-grid3 .social li{display:inline-block}
+.product-grid3 .social li a{font-size:14px;line-height:30px;width:30px;height:30px;border:1px solid rgba(0,0,0,.1);border-radius:50%;display:block;transition:all .3s ease 0s}
+.pagination>li>a { border-radius: 50% !important;margin: 0 5px;}
+
+.checked, .price span {
+  color: #ff9f1a; 
+}
+.example-button-row {
+    position: relative;
+    left: -25px;
+}
+.off{
+    border-top-left-radius: 5px; border-bottom-right-radius: 5px; color: white;
+}
+
+    .card {
+        /* height: 340px; */
+        padding: 0;
+        box-shadow: 0 0 2px wheat ;
+        position: relative;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+    }
+    .category-title{
+        color: rgb(23, 22, 24);
+        font-weight: bold;
+        line-height: 14px;
+        font-size: 14px;
+        text-decoration: none;}
+    .card:hover{
+        box-shadow: 0 0 5px grey;
+        transition: 0s;
+    }
+
+    .price{color:#000;font-size:18px;letter-spacing:1px;font-weight:600;}
+    .rating {padding:0;margin:0 0 3px;list-style:none;text-align:left;display:block;
+    color:#ffd200;font-size:13px;}
+    .fa-star{font-size: 10px;}
+
+    .badge {
+        padding-left: 77px;
+        padding-right: 9px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      
+      }
+
+    #lblCartCount {
+        font-size: 12px;
+        background: linear-gradient(to bottom right, #ff66ff 0%, #ff0000 116%);
+        color: #fff;
+        padding: 0 5px;
+        vertical-align: top;
+        margin-left: -9px;
+    }
+
+    .search {
+        width: 400px;
+        position: relative;
+        z-index: 109;
+      }
+      
+      .search .mat-card {
+        padding: 0;
+        position: relative;
+        top: -10;
+      }
+      .search input{
+        width: 100%;
+        border: none;
+        font-size: 14px;
+        padding: 5px 40px 5px 20px;
+      }
+      
+      .search input:focus{
+        border:none;
+        box-shadow: none;
+      }
+      
+      .search .mat-card .searchIcon{
+        font-size: 15px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      
+      .search .searchItems{
+        position: absolute;
+        top:38px;
+        left: 0;
+        background-color: white;
+      }
+      .search .mat-card.searchItems > div{
+        padding: 10px;
+      }
+      @media only screen and (max-width: 991px){
+        .search {
+          width: 80%;
+          margin-left: 15%;
+          top:-5px;
+        }
+      
+        .search.searchFull {
+          width: 100%;
+          margin-left: 57%;
+        }
+      
+      }
+      
